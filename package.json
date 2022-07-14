@@ -59,7 +59,7 @@
     "account": "node account.js",
     "kunacode": "node kunacode.js",
     "balance": "node balance.js",
-    "withdrawal": "node withdrawal.js",
+    "withdraw": "node withdraw.js",
     "create": "node createkunacode.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
