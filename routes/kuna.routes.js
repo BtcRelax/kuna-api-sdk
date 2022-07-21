@@ -148,6 +148,32 @@ router.post(
   }  
 );
 
+///api/kuna/createorder
+router.post(
+  '/createorder',    
+  [ ],
+  async (req, res) => {
+    try {
+      const errors = validationResult(req);
+
+      if (!errors.isEmpty()) {
+        return res.status(400).json({
+          errors: errors.array(),
+          message: "Incorrect data for order creation"
+        }
+        );
+      }
+     
+      orderrequest = {symbol : req.body.symbol , type: 'market', amount:  req.body.amount , price : req.body.price, stop_price:  req.body.stop_price  };
+      const result = await kuna.private.createOrder(orderrequest);
+
+      res.status(201).json({result});
+    } catch (e) {
+      res.status(500).json( {message: `Error catched: ${e.message}`} );
+    }    
+  }  
+);
+
 ///api/kuna/kunacodeactivate
 router.post(
   '/kunacodeactivate',    
