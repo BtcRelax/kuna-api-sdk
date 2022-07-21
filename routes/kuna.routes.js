@@ -163,8 +163,8 @@ router.post(
         }
         );
       }
-     
-      orderrequest = {symbol : req.body.symbol , type: 'market', amount:  req.body.amount , price : req.body.price, stop_price:  req.body.stop_price  };
+      
+      orderrequest = {symbol : req.body.symbol , type: req.body.type , amount:  req.body.amount , price : req.body.price, stop_price:  req.body.stop_price };
       const result = await kuna.private.createOrder(orderrequest);
 
       res.status(201).json({result});
