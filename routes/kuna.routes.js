@@ -53,6 +53,39 @@ router.get(
     }
 );
 
+///api/kuna/getexchangerates?currency=
+router.get(
+  '/getexchangerates',
+  [
+    check('currency','Currency code minimal lenght 3').isLength( min = 3 )
+  ],
+  async(req, res) => {
+      try {
+          let result  = await kuna.public.getExchangeRates(req.query.currency);
+          res.status(200).json({ result});
+      } catch (e) {
+          res.status(500).json({ message: `Error catched: ${e.message}`});
+      }
+    }
+);
+
+///api/kuna/gettickers?market=
+router.get(
+  '/gettickers',
+  [
+    check('market','Minimal market lenght 6').isLength( min = 6 )
+  ],
+  async(req, res) => {
+      try {
+          let result  = await kuna.public.getTickers(req.query.market);
+          res.status(200).json({ result});
+      } catch (e) {
+          res.status(500).json({ message: `Error catched: ${e.message}`});
+      }
+    }
+);
+
+
 ///api/kuna/getactiveorders
 router.get(
   '/getactiveorders',

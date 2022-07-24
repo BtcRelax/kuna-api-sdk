@@ -10,6 +10,14 @@ GET http://localhost:81/api/kuna/getmarkets
 
 ###
 
+GET http://localhost:81/api/kuna/getexchangerates?currency=bch
+
+###
+
+GET http://localhost:81/api/kuna/gettickers?market=bchuah
+
+###
+
 GET http://localhost:81/api/kuna/getactiveorders?market=bchuah
 
 

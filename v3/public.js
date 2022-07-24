@@ -34,6 +34,18 @@ KunaPublic.prototype.getMarkets = function() {
 }
 
 /**
+ * Exchange rates for certain currency
+ * @description https://docs.kuna.io/reference/getv3exchangeratescurrency
+ */
+ KunaPublic.prototype.getExchangeRates = function(curerency) {
+  if (!curerency) {
+    return Promise.reject('Set some currency uah, btc, bch ...')
+  }
+  return this.request(`exchange-rates/${curerency}`)
+}
+
+
+/**
  * Последние данные по рынку
  * @description https://api.kuna.io/v3/tickers?symbols=btcuah
  */
