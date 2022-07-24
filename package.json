@@ -62,7 +62,7 @@
     "order": "node order.js",
     "withdraw": "node withdraw.js",
     "create": "node createkunacode.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node server.js"
   },
   "version": "3.0.1",
   "jshintConfig": {

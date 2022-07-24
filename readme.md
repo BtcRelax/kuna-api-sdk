@@ -7,7 +7,7 @@
 Create file production.json and default.json from default.json.sample
 
 ```
-св сщташп
+cd config
 cp default.json.sample default.json
 cp default.json.sample production.json
 ```

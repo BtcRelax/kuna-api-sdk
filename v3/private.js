@@ -186,7 +186,6 @@ KunaPrivate.prototype.getTradesByOrderId = function (market, order_id) {
   return this.authedRequest(url, method)
 }
 
-
 /**
  * Сделать запрос
  * @param {String} url_api
@@ -211,17 +210,23 @@ KunaPrivate.prototype.authedRequest = async function(url_api, method, body = {})
     }
   }
 
+  console.log('Request:' + method + " " + url )
+  if (method !== 'GET' ) {
+    console.log('Body: ' + body )
+  }
+  
+
   return axios[method](url, body, options)
     .then(({data}) => data)
-    // .catch((error) => {
-    //   if (error.response != undefined) {
-    //     console.log('ERROR: ', error.response.data)
-    //     // console.log(error)
-    //   } else {
-    //     console.log('ERROR 2')
-    //     console.log(error)
-    //   }
-    // })
+     .catch((error) => {
+       if (error.response != undefined) {
+         console.log('ERROR! Response: ', error.response.data)
+         console.log(error)
+       } else {
+         console.log('ERROR without response!')
+         console.log(error)
+       }
+     })
 }
 
 /**

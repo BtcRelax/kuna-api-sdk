@@ -40,6 +40,36 @@ router.get(
       }
 );
 
+///api/kuna/getmarkets
+router.get(
+  '/getmarkets',
+  async(req, res) => {
+      try {
+          let markets  = await kuna.public.getMarkets();
+          res.status(200).json({ markets});
+      } catch (e) {
+          res.status(500).json({ message: `Error catched: ${e.message}`});
+      }
+    }
+);
+
+///api/kuna/getactiveorders
+router.get(
+  '/getactiveorders',
+  [
+    check('market','Minimal market lenght 6').isLength( min = 6 )
+  ],
+  async(req, res) => {
+      try {
+          let orders  = await kuna.private.getActiveOrders(req.query.market);
+          res.status(200).json({ orders});
+      } catch (e) {
+          res.status(500).json({ message: `Error catched: ${e.message}`});
+      }
+    }
+);
+
+
 ///api/kuna/kunacode
 router.get(
     '/kunacode',
