@@ -272,7 +272,7 @@ router.post(
         );
       }
       
-      orderrequest = {symbol : req.body.symbol , type: req.body.type , amount:  req.body.amount , price : req.body.price };
+      orderrequest = {symbol: req.body.symbol , amount:  req.body.amount, price: req.body.price , type: req.body.type  };
       const result = await kuna.private.createOrder(orderrequest);
 
       res.status(201).json({result});

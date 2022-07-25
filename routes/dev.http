@@ -26,7 +26,7 @@ POST http://localhost:81/api/kuna/createorder
 Content-Type: application/json
 
 {
-    "symbol" : "bchuah" , "type":"market" , "amount":  100 , "price" : 5200 
+    "symbol" : "bchuah" , "amount":  0.0060 , "price" : 4988  , "type":"market" 
 }
 
 
