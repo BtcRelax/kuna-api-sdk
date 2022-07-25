@@ -64,7 +64,6 @@ KunaPrivate.prototype.accountBalance = function () {
 }
 
 
-
 /**
  * Создать ордер
  * @param {Object} order {symbol, type [limit, market, market_by_quote], amount, price}
@@ -212,7 +211,7 @@ KunaPrivate.prototype.authedRequest = async function(url_api, method, body = {})
 
   console.log('Request:' + method + " " + url )
   if (method !== 'GET' ) {
-    console.log('Body: ' + body )
+    console.log('Body: ' + JSON.stringify(body) )
   }
   
 

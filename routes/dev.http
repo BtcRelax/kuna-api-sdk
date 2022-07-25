@@ -20,6 +20,15 @@ GET http://localhost:81/api/kuna/gettickers?market=bchuah
 
 GET http://localhost:81/api/kuna/getactiveorders?market=bchuah
 
+###
+
+POST http://localhost:81/api/kuna/createorder
+Content-Type: application/json
+
+{
+    "symbol" : "bchuah" , "type":"market" , "amount":  100 , "price" : 5200 
+}
+
 
 ###
 
