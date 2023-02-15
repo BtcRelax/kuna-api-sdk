@@ -18,3 +18,16 @@ cp default.json.sample production.json
 
 `$env:NODE_ENV = 'production'` - to turn on production configuration (Windows case) 
 
+#### Add and start as service
+
+Before beginig you need to install package [pm2](https://pm2.keymetrics.io/docs/usage/quick-start/)
+
+```
+ npm install pm2@latest -g
+```
+
+and  for add service 
+
+```
+pm2 start npm --name "kuna api" --log-date-format 'DD-MM HH:mm:ss.SSS' -- start
+```
