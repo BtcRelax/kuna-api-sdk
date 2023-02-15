@@ -17,6 +17,11 @@ cp default.json.sample production.json
 #### How to set environment
 
 `$env:NODE_ENV = 'production'` - to turn on production configuration (Windows case) 
+If you want to use port 80 for listening, without root. Run:
+```
+sudo setcap cap_net_bind_service=+ep `readlink -f \`which node\``
+```
+
 
 #### Add and start as service
 
