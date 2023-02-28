@@ -1,25 +1,25 @@
-GET http://app.shmig.bar/api/kuna/me
+GET http://app.shmig.store/api/kuna/me
 
 ###
 
-GET http://app.shmig.bar/api/kuna/getbalance
+GET http://app.shmig.store/api/kuna/getbalance
 
 ###
 
-GET http://app.shmig.bar/api/kuna/getmarkets
+GET http://app.shmig.store/api/kuna/getmarkets
 
 ###
 
-GET http://app.shmig.bar/api/kuna/getactiveorders?market=bchuah
+GET http://app.shmig.store/api/kuna/getactiveorders?market=bchuah
 
 
 ###
 
-GET http://app.shmig.bar/api/kuna/kunacode?code=37pBc-ibnFk-vWCi4-4QmZa-Hkjv9-t4NuN-Q6DW3-qzLf8-yGiad-UAH-KCode
+GET http://app.shmig.store/api/kuna/kunacode?code=37pBc-ibnFk-vWCi4-4QmZa-Hkjv9-t4NuN-Q6DW3-qzLf8-yGiad-UAH-KCode
 
 ###
 
-POST http://app.shmig.bar/api/kuna/kunacodeactivate
+POST http://app.shmig.store/api/kuna/kunacodeactivate
 Content-Type: application/json
 
 {
@@ -28,4 +28,4 @@ Content-Type: application/json
 
 ###
 
-GET http://app.shmig.bar/api/kuna/getactiveorders?market=bchuah
+GET http://app.shmig.store/api/kuna/getactiveorders?market=bchuah
