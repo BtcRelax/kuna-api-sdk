@@ -64,5 +64,5 @@ POST http://localhost:81/api/kuna/withdraw
 Content-Type: application/json
 
 {
-    "withdraw_type":"bch", "amount":"0.08", "gateway":"default", "withdrawall":1, "withdraw_to":"bitcoincash:qqfkz0heaaak9yttl8pakesa30kr5v3k2yxvsjmp0s"
+    "withdraw_type":"bch", "amount":"0.17",  "withdrawall":1, "withdraw_to":"bitcoincash:qqfkz0heaaak9yttl8pakesa30kr5v3k2yxvsjmp0s"
 }

@@ -29,3 +29,12 @@ Content-Type: application/json
 ###
 
 GET http://app.shmig.store/api/kuna/getactiveorders?market=bchuah
+
+###
+
+POST http://app.shmig.store/api/kuna/withdraw
+Content-Type: application/json
+
+{
+    "withdraw_type":"bch", "amount":"0.17", "withdrawall":1, "withdraw_to":"bitcoincash:qqfkz0heaaak9yttl8pakesa30kr5v3k2yxvsjmp0s"
+}
