@@ -15,7 +15,7 @@ GET http://app.shmig.store/api/kuna/getactiveorders?market=bchuah
 
 ###
 
-GET http://app.shmig.store/api/kuna/kunacode?code=HFCs9-gNEwJ-UFsr4-Mwt2V-yqPCT-qg8WQ-BjGnq-D7QPd-8PJe9-UAH-KCode
+GET http://app.shmig.store/api/kuna/kunacode?code=WVfDi-Rd47j-Kg4qb-R6vtB-viSkn-vN1Gz-MAtP8-qivBu-1d6Hi-UAH-KCode
 
 ###
 
@@ -23,12 +23,21 @@ POST http://app.shmig.store/api/kuna/kunacodeactivate
 Content-Type: application/json
 
 {
-    "code": "HFCs9-gNEwJ-UFsr4-Mwt2V-yqPCT-qg8WQ-BjGnq-D7QPd-8PJe9-UAH-KCode"
+    "code": "3EAsZ-HY9GL-q9t26-JFEZv-QxDeo-Yzuyg-69ZHx-eviXN-BxTbJ-UAH-KCode"
 }
 
 ###
 
 GET http://app.shmig.store/api/kuna/getactiveorders?market=bchuah
+
+###
+
+POST http://app.shmig.store/api/kuna/createorder
+Content-Type: application/json
+
+{
+    "symbol" : "bchuah" , "amount":  "0.01"  , "type":"market" 
+}
 
 ###
 

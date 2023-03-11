@@ -50,7 +50,7 @@ POST http://localhost:81/api/kuna/kunacodeactivate
 Content-Type: application/json
 
 {
-    "code": "37pBc-ibnFk-vWCi4-4QmZa-Hkjv9-t4NuN-Q6DW3-qzLf8-yGiad-UAH-KCode"
+    "code": "WVfDi-Rd47j-Kg4qb-R6vtB-viSkn-vN1Gz-MAtP8-qivBu-1d6Hi-UAH-KCode"
 }
 
 ###
@@ -64,5 +64,5 @@ POST http://localhost:81/api/kuna/withdraw
 Content-Type: application/json
 
 {
-    "withdraw_type":"bch", "amount":"0.17",  "withdrawall":1, "withdraw_to":"bitcoincash:qqfkz0heaaak9yttl8pakesa30kr5v3k2yxvsjmp0s"
+    "withdraw_type":"bch", "amount":"0.05",  "withdrawall":1, "withdraw_to":"bitcoincash:qqfkz0heaaak9yttl8pakesa30kr5v3k2yxvsjmp0s"
 }
