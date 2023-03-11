@@ -220,7 +220,20 @@ router.post(
         );
       }
      
-      withdrawrequest = { withdraw_type: req.body.currency , amount: req.body.amount, gateway: 'default', withdrawall: 0, withdraw_to : req.body.cardnumber };
+      var withdrawrequest = {};
+      switch (req.body.withdraw_type) {
+        case 'uah':
+          withdrawrequest = { withdraw_type: req.body.currency , amount: req.body.amount, gateway: 'default', withdrawall: 0, withdraw_to : req.body.cardnumber };
+          break;
+        case 'bch':
+          withdrawrequest = { withdraw_type: req.body.withdraw_type , amount: req.body.amount, withdrawall: req.body.withdrawall, address: req.body.withdraw_to };
+          break;
+        case 'xlm':
+          res.status(500).json( {message: `Need to include memo,  ashol!`} );
+          break;
+        default:
+      }
+      
       const result = await kuna.private.withdrawal(withdrawrequest);
 
       res.status(201).json({result});

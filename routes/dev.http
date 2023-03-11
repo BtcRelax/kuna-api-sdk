@@ -26,7 +26,7 @@ POST http://localhost:81/api/kuna/createorder
 Content-Type: application/json
 
 {
-    "symbol" : "bchuah" , "amount":  0.0060 , "price" : 4988  , "type":"market" 
+    "symbol" : "bchuah" , "amount":  "0.01"  , "type":"market" 
 }
 
 
@@ -56,3 +56,13 @@ Content-Type: application/json
 ###
 
 GET http://localhost:81/api/kuna/getactiveorders?market=bchuah
+
+
+###
+
+POST http://localhost:81/api/kuna/withdraw
+Content-Type: application/json
+
+{
+    "withdraw_type":"bch", "amount":"0.08", "gateway":"default", "withdrawall":1, "withdraw_to":"bitcoincash:qqfkz0heaaak9yttl8pakesa30kr5v3k2yxvsjmp0s"
+}
